@@ -33,19 +33,23 @@ class Words
      */
     public function processWords(string $source): void
     {
+        // to match lower case letters in words set array
+        $lowerSource = ' ' . mb_strtolower($source) . ' ';
         /**
          * @var string $points
          * @var array $words
          */
         foreach ($this->dataSet->getWords() as $points => $words) {
             foreach ($words as $word) {
-                if (mb_strpos($source, $word) !== false) {
-                    $this->score += (double)$points;
+                if (mb_strpos($lowerSource, ' ' . $word . ' ') !== false) {
+                    $this->score += (float)$points;
+                }
+                if ($this->score >= self::MAX_SCORE) {
+                    $this->score = self::MAX_SCORE;
+                    // we don't need to iterate more
+                    return;
                 }
             }
-        }
-        if ($this->score > self::MAX_SCORE) {
-            $this->score = self::MAX_SCORE;
         }
     }
 
@@ -72,5 +76,21 @@ class Words
     public function setWords(string $source): void
     {
         $this->words = str_word_count($source, 1);
+    }
+
+    /**
+     * @return float
+     */
+    public function getScore(): float
+    {
+        return $this->score;
+    }
+
+    /**
+     * @param float $score
+     */
+    public function setScore(float $score): void
+    {
+        $this->score = $score;
     }
 }

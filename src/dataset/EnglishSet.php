@@ -36,11 +36,11 @@ class EnglishSet implements SetContract
         '0.8' => ['silly', 'tits', 'pussy', 'sick', 'git', 'ass'],
         '0.7' => ['shallow', 'foolish', 'nonce', 'bugger'],
         '0.6' => ['broken', 'mindless', 'fat', 'nude'],
-        '0.5' => ['useless', 'thoughtless'],
-        '0.4' => ['dude', 'pal'],
-        '0.3' => ['bully', 'sneaky', 'greedy'],
-        '0.2' => ['superficial', 'numb', 'clown'],
-        '0.1' => ['fake', 'strange', 'ignorant', 'critical', 'nuts', 'cum', 'come', 'creep'],
+        '0.5' => ['bully', 'sneaky', 'greedy', 'creep'],
+        '0.4' => ['superficial', 'numb', 'clown'],
+        '0.3' => ['fake', 'strange', 'ignorant', 'critical', 'nuts', 'cum', 'come'],
+        '0.2' => ['useless', 'thoughtless', 'crazy'],
+        '0.1' => ['dude', 'pal', 'yo'],
     ];
 
     private $phrases = [
