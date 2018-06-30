@@ -31,33 +31,35 @@ class EnglishSet implements SetContract
             'bukakke',
             'dildo',
             'strapon',
+            'shag',
         ],
         '0.9' => ['ugly', 'stupid', 'dumb', 'boobs', 'pish', 'fanny', 'slag', 'squirt'],
         '0.8' => ['silly', 'tits', 'pussy', 'sick', 'git', 'ass'],
         '0.7' => ['shallow', 'foolish', 'nonce', 'bugger'],
-        '0.6' => ['broken', 'mindless', 'fat', 'nude'],
+        '0.6' => ['broken', 'mindless', 'fat', 'nude', 'wft'],
         '0.5' => ['bully', 'sneaky', 'greedy', 'creep'],
         '0.4' => ['superficial', 'numb', 'clown'],
         '0.3' => ['fake', 'strange', 'ignorant', 'critical', 'nuts', 'cum', 'come'],
-        '0.2' => ['useless', 'thoughtless', 'crazy'],
+        '0.2' => ['useless', 'thoughtless', 'crazy', 'bollocks'],
         '0.1' => ['dude', 'pal', 'yo'],
     ];
 
     private $phrases = [
-        '1.0' => ['dirty sanchez', 'gang bang'],
-        '0.9' => ['swinger party'],
+        '1.0' => ['dirty sanchez', 'gang bang', 'piss off'],
+        '0.9' => ['swinger party', 'bloody hell', 'bugger off'],
+        '0.8' => ['get staffed', 'get lost'],
     ];
 
     /**
      * @return array
      */
-    public function getWords(): array
+    public function getWords() : array
     {
         return $this->words;
     }
 
-    public function getPhrases(): array
+    public function getPhrases() : array
     {
-        return $this->words;
+        return $this->phrases;
     }
 }

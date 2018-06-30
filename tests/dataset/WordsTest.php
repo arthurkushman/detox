@@ -22,7 +22,7 @@ class WordsTest extends TestCase
     public function setUp()
     {
         parent::setUp();
-        $this->set = new EnglishSet();
+        $this->set   = new EnglishSet();
         $this->words = new Words($this->set);
     }
 
@@ -87,6 +87,16 @@ class WordsTest extends TestCase
      */
     public function it_checks_multiple_words_on_score()
     {
+        $src = 'She is so foolish and thoughtless';
+        $this->words->processWords($src);
+        $this->assertEquals(0.9, $this->words->getScore());
+    }
+
+    /**
+     * @test
+     */
+    public function it_checks_patterns_on_score()
+    {
         // 0.8 level for middle asterisks
         $src = 'f***k that was hilarious';
         $this->words->processPatterns($src);
@@ -101,5 +111,15 @@ class WordsTest extends TestCase
         $src = '***k you';
         $this->words->processPatterns($src);
         $this->assertEquals(0.5, $this->words->getScore());
+    }
+
+    /**
+     * @test
+     */
+    public function it_checks_multiple_patterns_on_score()
+    {
+        $src = 'This is f***k as hell and that b**ch thought that was normal';
+        $this->words->processPatterns($src);
+        $this->assertEquals(0.8, $this->words->getScore());
     }
 }

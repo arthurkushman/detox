@@ -13,8 +13,8 @@ class Words
     public const ASTERISKS_LEFT   = 0.5;
     public const ASTERISKS_RIGHT  = 0.6;
 
-    private $dataSet;
-    private $score = 0;
+    protected $dataSet;
+    protected $score = 0;
 
     private $words = [];
 
@@ -47,7 +47,7 @@ class Words
                 if ($this->score >= self::MAX_SCORE) {
                     $this->score = self::MAX_SCORE;
 
-                    // we don't need to iterate more
+                    // we don't need to iterate more with max score
                     return;
                 }
             }
@@ -60,7 +60,7 @@ class Words
     public function processPatterns(string $source) : void
     {
         $lowerSource = $this->addLowSpaces($source);
-        if (preg_match('/\s(\S\D[\*]+\D\S)\s/', $lowerSource) === 1) {
+        if (preg_match('/\s(([\w]+)[\*]+([\w]+))\s/', $lowerSource) === 1) {
             $this->score += self::ASTERISKS_MIDDLE;
         } else if (preg_match('/\s(([\w]+)[\*]+)/', $lowerSource) === 1) {
             $this->score += self::ASTERISKS_RIGHT;
@@ -97,7 +97,7 @@ class Words
      * @param string $str
      * @return string
      */
-    private function addLowSpaces(string $str) : string
+    protected function addLowSpaces(string $str) : string
     {
         return ' ' . mb_strtolower($str) . ' ';
     }
