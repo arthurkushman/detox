@@ -31,6 +31,8 @@ class WordsTest extends TestCase
      */
     public function it_checks_words_on_score()
     {
+        // to test setter for data
+        $this->words->setData(new EnglishSet());
         // 1.0 level
         $src = 'Fuck you bitch';
         $this->words->processWords($src);

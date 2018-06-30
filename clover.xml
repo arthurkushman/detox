@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1530355871">
-  <project timestamp="1530355871">
+<coverage generated="1530365534">
+  <project timestamp="1530365534">
     <package name="detox\core">
       <file name="/srv/detox/src/core/Phrases.php">
         <class name="detox\core\Phrases" namespace="detox\core">
@@ -20,41 +20,41 @@
       </file>
       <file name="/srv/detox/src/core/Words.php">
         <class name="detox\core\Words" namespace="detox\core">
-          <metrics complexity="14" methods="7" coveredmethods="6" conditionals="0" coveredconditionals="0" statements="25" coveredstatements="23" elements="32" coveredelements="29"/>
+          <metrics complexity="14" methods="7" coveredmethods="7" conditionals="0" coveredconditionals="0" statements="25" coveredstatements="25" elements="32" coveredelements="32"/>
         </class>
-        <line num="26" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="5"/>
-        <line num="28" type="stmt" count="5"/>
-        <line num="29" type="stmt" count="5"/>
-        <line num="34" type="method" name="processWords" visibility="public" complexity="5" crap="5" count="2"/>
-        <line num="37" type="stmt" count="2"/>
+        <line num="24" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="5"/>
+        <line num="26" type="stmt" count="5"/>
+        <line num="27" type="stmt" count="5"/>
+        <line num="32" type="method" name="processWords" visibility="public" complexity="5" crap="5" count="2"/>
+        <line num="35" type="stmt" count="2"/>
+        <line num="40" type="stmt" count="2"/>
+        <line num="41" type="stmt" count="2"/>
         <line num="42" type="stmt" count="2"/>
         <line num="43" type="stmt" count="2"/>
-        <line num="44" type="stmt" count="2"/>
         <line num="45" type="stmt" count="2"/>
-        <line num="47" type="stmt" count="2"/>
-        <line num="48" type="stmt" count="1"/>
-        <line num="51" type="stmt" count="2"/>
-        <line num="55" type="stmt" count="2"/>
-        <line num="60" type="method" name="processPatterns" visibility="public" complexity="4" crap="4" count="2"/>
+        <line num="46" type="stmt" count="1"/>
+        <line num="49" type="stmt" count="2"/>
+        <line num="53" type="stmt" count="2"/>
+        <line num="58" type="method" name="processPatterns" visibility="public" complexity="4" crap="4" count="2"/>
+        <line num="60" type="stmt" count="2"/>
+        <line num="61" type="stmt" count="2"/>
         <line num="62" type="stmt" count="2"/>
-        <line num="63" type="stmt" count="2"/>
-        <line num="64" type="stmt" count="2"/>
+        <line num="63" type="stmt" count="1"/>
+        <line num="64" type="stmt" count="1"/>
         <line num="65" type="stmt" count="1"/>
         <line num="66" type="stmt" count="1"/>
-        <line num="67" type="stmt" count="1"/>
-        <line num="68" type="stmt" count="1"/>
-        <line num="70" type="stmt" count="2"/>
-        <line num="75" type="method" name="setWords" visibility="public" complexity="1" crap="2" count="0"/>
-        <line num="77" type="stmt" count="0"/>
-        <line num="78" type="stmt" count="0"/>
-        <line num="83" type="method" name="getScore" visibility="public" complexity="1" crap="1" count="5"/>
-        <line num="85" type="stmt" count="5"/>
-        <line num="91" type="method" name="setScore" visibility="public" complexity="1" crap="1" count="3"/>
-        <line num="93" type="stmt" count="3"/>
-        <line num="94" type="stmt" count="3"/>
-        <line num="100" type="method" name="addLowSpaces" visibility="protected" complexity="1" crap="1" count="5"/>
-        <line num="102" type="stmt" count="5"/>
-        <metrics loc="103" ncloc="71" classes="1" methods="7" coveredmethods="6" conditionals="0" coveredconditionals="0" statements="25" coveredstatements="23" elements="32" coveredelements="29"/>
+        <line num="68" type="stmt" count="2"/>
+        <line num="73" type="method" name="setData" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="75" type="stmt" count="1"/>
+        <line num="76" type="stmt" count="1"/>
+        <line num="81" type="method" name="getScore" visibility="public" complexity="1" crap="1" count="5"/>
+        <line num="83" type="stmt" count="5"/>
+        <line num="89" type="method" name="setScore" visibility="public" complexity="1" crap="1" count="3"/>
+        <line num="91" type="stmt" count="3"/>
+        <line num="92" type="stmt" count="3"/>
+        <line num="98" type="method" name="addLowSpaces" visibility="protected" complexity="1" crap="1" count="5"/>
+        <line num="100" type="stmt" count="5"/>
+        <metrics loc="101" ncloc="69" classes="1" methods="7" coveredmethods="7" conditionals="0" coveredconditionals="0" statements="25" coveredstatements="25" elements="32" coveredelements="32"/>
       </file>
     </package>
     <package name="detox\dataset">
@@ -72,6 +72,6 @@
     <file name="/srv/detox/src/dataset/SetContract.php">
       <metrics loc="11" ncloc="11" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
     </file>
-    <metrics files="4" loc="209" ncloc="159" classes="3" methods="10" coveredmethods="9" conditionals="0" coveredconditionals="0" statements="36" coveredstatements="34" elements="46" coveredelements="43"/>
+    <metrics files="4" loc="207" ncloc="157" classes="3" methods="10" coveredmethods="10" conditionals="0" coveredconditionals="0" statements="36" coveredstatements="36" elements="46" coveredelements="46"/>
   </project>
 </coverage>

@@ -16,8 +16,6 @@ class Words
     protected $dataSet;
     protected $score = 0;
 
-    private $words = [];
-
     /**
      * Words constructor.
      *
@@ -70,11 +68,11 @@ class Words
     }
 
     /**
-     * @param string $source
+     * @param SetContract $set
      */
-    public function setWords(string $source) : void
+    public function setData(SetContract $set) : void
     {
-        $this->words = str_word_count($source, 1);
+        $this->dataSet = $set;
     }
 
     /**

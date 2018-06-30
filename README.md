@@ -3,6 +3,7 @@
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/arthurkushman/detox/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/arthurkushman/detox/?branch=master)
 [![Build Status](https://scrutinizer-ci.com/g/arthurkushman/detox/badges/build.png?b=master)](https://scrutinizer-ci.com/g/arthurkushman/detox/build-status/master)
 [![Code Intelligence Status](https://scrutinizer-ci.com/g/arthurkushman/detox/badges/code-intelligence.svg?b=master)](https://scrutinizer-ci.com/code-intelligence)
+[![codecov](https://codecov.io/gh/arthurkushman/detox/branch/master/graph/badge.svg)](https://codecov.io/gh/arthurkushman/detox)
 
 ### Using words and word patterns
 To get toxicity score on any text:
