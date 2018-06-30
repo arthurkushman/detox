@@ -82,8 +82,19 @@ class WordsTest extends TestCase
         $this->assertEquals(0.1, $this->words->getScore());
     }
 
+    /**
+     * @test
+     */
     public function it_checks_multiple_wrods_on_score()
     {
-
+        // 0.8 level for middle asterisks
+        $src = 'f***k that was hilarious';
+        $this->words->processPatterns($src);
+        $this->assertEquals(0.8, $this->words->getScore());
+        // 0.6 level for right asterisks
+        $this->words->setScore(0);
+        $src = 'f*** you';
+        $this->words->processPatterns($src);
+        $this->assertEquals(0.6, $this->words->getScore());
     }
 }

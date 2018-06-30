@@ -9,12 +9,12 @@ class Words
 {
 
     public const MAX_SCORE        = 1;
-    public const ASTERISKS_MIDDLE = 0.5;
-    public const ASTERISKS_LEFT   = 0.2;
-    public const ASTERISKS_RIGHT  = 0.3;
+    public const ASTERISKS_MIDDLE = 0.8;
+    public const ASTERISKS_LEFT   = 0.5;
+    public const ASTERISKS_RIGHT  = 0.6;
 
     private $dataSet;
-    private $score;
+    private $score = 0;
 
     private $words = [];
 
@@ -34,7 +34,7 @@ class Words
     public function processWords(string $source): void
     {
         // to match lower case letters in words set array
-        $lowerSource = ' ' . mb_strtolower($source) . ' ';
+        $lowerSource = $this->addLowSpaces($source);
         /**
          * @var string $points
          * @var array $words
@@ -46,6 +46,7 @@ class Words
                 }
                 if ($this->score >= self::MAX_SCORE) {
                     $this->score = self::MAX_SCORE;
+
                     // we don't need to iterate more
                     return;
                 }
@@ -58,15 +59,13 @@ class Words
      */
     public function processPatterns(string $source): void
     {
-        $this->setWords($source);
-        foreach ($this->words as $word) {
-            if (preg_match('/\w(\*+)\w/', $word) === 1) {
-                $this->score += self::ASTERISKS_MIDDLE;
-            } else if (preg_match('/\w(\*+)/', $word) === 1) {
-                $this->score += self::ASTERISKS_LEFT;
-            } else if (preg_match('/(\*+)\w/', $word) === 1) {
-                $this->score += self::ASTERISKS_RIGHT;
-            }
+        $lowerSource = $this->addLowSpaces($source);
+        if (preg_match('/\s\D(\*+)\D\s/', $lowerSource) === 1) {
+            $this->score += self::ASTERISKS_MIDDLE;
+        } else if (preg_match('/\s\D(\*+)/', $lowerSource) === 1) {
+            $this->score += self::ASTERISKS_LEFT;
+        } else if (preg_match('/(\*+)\D\s/', $lowerSource) === 1) {
+            $this->score += self::ASTERISKS_RIGHT;
         }
     }
 
@@ -92,5 +91,14 @@ class Words
     public function setScore(float $score): void
     {
         $this->score = $score;
+    }
+
+    /**
+     * @param string $str
+     * @return string
+     */
+    private function addLowSpaces(string $str): string
+    {
+        return ' ' . mb_strtolower($str) . ' ';
     }
 }
