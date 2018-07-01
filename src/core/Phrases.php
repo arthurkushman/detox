@@ -5,12 +5,12 @@ namespace detox\core;
 class Phrases extends Words
 {
     /**
-     * @param string $source
+     * Finds phrases from *Set and sets score/replacements
      */
-    public function processPhrases(string $source)
+    public function processPhrases()
     {
         // to match lower case letters in words set array
-        $lowerSource = $this->addLowSpaces($source);
+        $lowerSource = $this->addLowSpaces($this->text->getText());
         /**
          * @var string $points
          * @var array $phrases

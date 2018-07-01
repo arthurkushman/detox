@@ -4,7 +4,14 @@ namespace detox\core;
 
 
 use detox\dataset\SetContract;
+use detox\source\Text;
 
+/**
+ * Class Words
+ * @package detox\core
+ *
+ * @property Text text
+ */
 class Words
 {
 
@@ -15,24 +22,27 @@ class Words
 
     protected $dataSet;
     protected $score = 0;
+    protected $text;
 
     /**
      * Words constructor.
      *
      * @param SetContract $set
+     * @param Text $text
      */
-    public function __construct(SetContract $set)
+    public function __construct(SetContract $set, Text $text)
     {
         $this->dataSet = $set;
+        $this->text    = $text;
     }
 
     /**
-     * @param string $source
+     * Finds bad words from *Set and setting score/replace
      */
-    public function processWords(string $source) : void
+    public function processWords() : void
     {
         // to match lower case letters in words set array
-        $lowerSource = $this->addLowSpaces($source);
+        $lowerSource = $this->addLowSpaces($this->text->getText());
         /**
          * @var string $points
          * @var array $words
@@ -53,11 +63,11 @@ class Words
     }
 
     /**
-     * @param string $source
+     * Finds bad words with asterisks and setting score/replace
      */
-    public function processPatterns(string $source) : void
+    public function processPatterns() : void
     {
-        $lowerSource = $this->addLowSpaces($source);
+        $lowerSource = $this->addLowSpaces($this->text->getText());
         if (preg_match('/\s(([\w]+)[\*]+([\w]+))\s/', $lowerSource) === 1) {
             $this->score += self::ASTERISKS_MIDDLE;
         } else if (preg_match('/\s(([\w]+)[\*]+)/', $lowerSource) === 1) {
@@ -98,5 +108,22 @@ class Words
     protected function addLowSpaces(string $str) : string
     {
         return ' ' . mb_strtolower($str) . ' ';
+    }
+
+    /**
+     * Setter for convenient DI with Text object and it's properties
+     * @param Text $text
+     */
+    public function setText(Text $text) : void
+    {
+        $this->text = $text;
+    }
+
+    /**
+     * @return Text
+     */
+    public function getText() : Text
+    {
+        return $this->text;
     }
 }
