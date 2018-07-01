@@ -42,7 +42,7 @@ class Words
     public function processWords() : void
     {
         // to match lower case letters in words set array
-        $lowerSource = $this->addLowSpaces($this->text->getText());
+        $lowerSource = $this->addLowSpaces($this->text->getString());
         /**
          * @var string $points
          * @var array $words
@@ -51,14 +51,14 @@ class Words
             foreach ($words as $word) {
                 if (mb_strpos($lowerSource, ' ' . $word . ' ') !== false) {
                     $this->score += (float)$points;
-                }
-                if ($this->score >= self::MAX_SCORE) {
-                    $this->score = self::MAX_SCORE;
-
-                    // we don't need to iterate more with max score
-                    return;
+                    if ($this->text->isReplaceable()) {
+                        $this->replace($word);
+                    }
                 }
             }
+        }
+        if ($this->score >= self::MAX_SCORE) {
+            $this->score = self::MAX_SCORE;
         }
     }
 
@@ -67,13 +67,26 @@ class Words
      */
     public function processPatterns() : void
     {
-        $lowerSource = $this->addLowSpaces($this->text->getText());
-        if (preg_match('/\s(([\w]+)[\*]+([\w]+))\s/', $lowerSource) === 1) {
-            $this->score += self::ASTERISKS_MIDDLE;
-        } else if (preg_match('/\s(([\w]+)[\*]+)/', $lowerSource) === 1) {
-            $this->score += self::ASTERISKS_RIGHT;
-        } else if (preg_match('/([\*]+([\w]+))\s/', $lowerSource) === 1) {
-            $this->score += self::ASTERISKS_LEFT;
+        $lowerSource = $this->addLowSpaces($this->text->getString());
+        if (preg_match_all('/\s(([\w]+)[\*]+([\w]+))\s/', $lowerSource, $matches) > 0) {
+            $this->score += (self::ASTERISKS_MIDDLE * count($matches[0]));
+            if ($this->text->isReplaceable()) {
+                $this->replaceMatches($matches);
+            }
+        }
+        $lowerSource = $this->addLowSpaces($this->text->getString());
+        if (preg_match_all('/\s(([\w]+)[\*]+)\s/', $lowerSource, $matches) > 0) {
+            $this->score += (self::ASTERISKS_RIGHT * count($matches[0]));
+            if ($this->text->isReplaceable()) {
+                $this->replaceMatches($matches);
+            }
+        }
+        $lowerSource = $this->addLowSpaces($this->text->getString());
+        if (preg_match_all('/\s([\*]+([\w]+))\s/', $lowerSource, $matches) > 0) {
+            $this->score += (self::ASTERISKS_LEFT * count($matches[0]));
+            if ($this->text->isReplaceable()) {
+                $this->replaceMatches($matches);
+            }
         }
     }
 
@@ -108,6 +121,24 @@ class Words
     protected function addLowSpaces(string $str) : string
     {
         return ' ' . mb_strtolower($str) . ' ';
+    }
+
+    /**
+     * @param string $phrase word or phrase to replace
+     */
+    protected function replace(string $phrase) : void
+    {
+        // todo: slice the word with replacement to prevent WoRd -> word transformations
+        $this->text->setString(str_replace($phrase, $this->text->getPrefix() . $this->text->getReplaceChars() . $this->text->getPostfix(),
+            mb_strtolower($this->text->getString())));
+    }
+
+    private function replaceMatches(array $matches) : void
+    {
+        /** @var array $matches */
+        foreach ($matches[0] as $word) {
+            $this->replace($word);
+        }
     }
 
     /**

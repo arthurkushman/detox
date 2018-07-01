@@ -30,10 +30,10 @@ class TextTest extends TestCase
      */
     public function it_checks_text()
     {
-        $this->assertEmpty($this->text->getText());
+        $this->assertEmpty($this->text->getString());
         $str = $this->faker->title;
-        $this->text->setText($str);
-        $this->assertEquals($str, $this->text->getText());
+        $this->text->setString($str);
+        $this->assertEquals($str, $this->text->getString());
     }
 
     /**

@@ -1,4 +1,4 @@
-## Detox is a library to detect toxic comments of variable length with different patterns
+## Detox is a library to detect toxic comments/posts of variable length with different patterns
 
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/arthurkushman/detox/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/arthurkushman/detox/?branch=master)
 [![Build Status](https://scrutinizer-ci.com/g/arthurkushman/detox/badges/build.png?b=master)](https://scrutinizer-ci.com/g/arthurkushman/detox/build-status/master)
@@ -46,18 +46,33 @@ There are no constraints to use all options at once, so u can do the following:
     // Phrases object extends Words - just use all inherited methods 
     $detox = new Phrases(new EnglishSet(), $text);
     $detox->processWords();
-    // change text in Text object
-    $text->setText('Another text');
+    // change string in Text object
+    $text->setString('Another text');
     // inject Text object to Phrases 
     $detox->setText($text);
     $detox->processPhrases();
-    $text->setText('Yet another text');
+    $text->setString('Yet another text');
     $detox->setText($text);
     $detox->processPatterns();
     if ($detox->getScore() >= 0.5) {
         echo 'Toxic text detected';
     }
 ```
+
+### Replace with custom templates and prefix/postfix pre-sets
+An additional option that u may need in particular situations is to replace words/phrases with pre-set template:
+```php
+    $this->text->setPrefix('[');
+    $this->text->setPostfix(']');
+    $this->text->setReplaceChars('____');
+    $this->text->setString('Just piss off dude');
+    $this->text->setReplaceable(true);
+    $this->phrases->setText($this->text);
+
+    $this->phrases->processPhrases();
+    echo $this->phrases->getText()->getString(); // output: Just [____] dude 
+```
+By default pattern is 5 dashes, so u can call only `$this->text->setReplaceable(true);` before any processor to achieve replacement with default settings. 
 
 ### Run tests
 In root directory (in console) run the following:

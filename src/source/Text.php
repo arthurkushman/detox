@@ -5,21 +5,22 @@ namespace detox\source;
 class Text
 {
     private $text;
-    private $replaceChars;
-    private $prefix;
-    private $postfix;
+    private $replaceChars  = '-----';
+    private $prefix        = ' _';
+    private $postfix       = '_ ';
+    private $isReplaceable = false;
 
     public function __construct(string $text)
     {
         $this->text = $text;
     }
 
-    public function setText(string $text) : void
+    public function setString(string $text) : void
     {
         $this->text = $text;
     }
 
-    public function getText() : string
+    public function getString() : string
     {
         return $this->text;
     }
@@ -70,5 +71,21 @@ class Text
     public function getPrefix()
     {
         return $this->prefix;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function isReplaceable() : bool
+    {
+        return $this->isReplaceable;
+    }
+
+    /**
+     * @param mixed $isReplaceable
+     */
+    public function setReplaceable(bool $isReplaceable) : void
+    {
+        $this->isReplaceable = $isReplaceable;
     }
 }

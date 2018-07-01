@@ -10,7 +10,7 @@ class Phrases extends Words
     public function processPhrases()
     {
         // to match lower case letters in words set array
-        $lowerSource = $this->addLowSpaces($this->text->getText());
+        $lowerSource = $this->addLowSpaces($this->text->getString());
         /**
          * @var string $points
          * @var array $phrases
@@ -19,14 +19,14 @@ class Phrases extends Words
             foreach ($phrases as $phrase) {
                 if (mb_strpos($lowerSource, ' ' . $phrase . ' ') !== false) {
                     $this->score += (float)$points;
-                }
-                if ($this->score >= self::MAX_SCORE) {
-                    $this->score = self::MAX_SCORE;
-
-                    // we don't need to iterate more with max score
-                    return;
+                    if ($this->text->isReplaceable()) {
+                        $this->replace($phrase);
+                    }
                 }
             }
+        }
+        if ($this->score >= self::MAX_SCORE) {
+            $this->score = self::MAX_SCORE;
         }
     }
 }
