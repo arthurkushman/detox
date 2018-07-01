@@ -74,6 +74,19 @@ An additional option that u may need in particular situations is to replace word
 ```
 By default pattern is 5 dashes, so u can call only `$this->text->setReplaceable(true);` before any processor to achieve replacement with default settings. 
 
+### Creating custom data-set
+```php
+    $customSet = new CustomSet();
+    $customSet->setWords([
+        '0.9' => ['weird']
+    ]);
+    $this->text->setString('This weird text should be detected');
+    $this->words->setText($this->text);
+    $this->words->setDataSet($customSet);
+    $this->words->processWords();
+    echo $this->words->getScore(); // output: 0.9
+```
+
 ### Run tests
 In root directory (in console) run the following:
 ```php

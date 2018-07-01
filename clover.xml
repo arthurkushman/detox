@@ -1,43 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1530446422">
-  <project timestamp="1530446422">
+<coverage generated="1530450677">
+  <project timestamp="1530450677">
     <package name="detox\core">
       <file name="/srv/detox/src/core/Phrases.php">
         <class name="detox\core\Phrases" namespace="detox\core">
           <metrics complexity="6" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="10" coveredstatements="10" elements="11" coveredelements="11"/>
         </class>
-        <line num="10" type="method" name="processPhrases" visibility="public" complexity="6" crap="6" count="2"/>
-        <line num="13" type="stmt" count="2"/>
-        <line num="18" type="stmt" count="2"/>
-        <line num="19" type="stmt" count="2"/>
-        <line num="20" type="stmt" count="2"/>
-        <line num="21" type="stmt" count="2"/>
-        <line num="22" type="stmt" count="2"/>
-        <line num="23" type="stmt" count="2"/>
-        <line num="28" type="stmt" count="2"/>
+        <line num="10" type="method" name="processPhrases" visibility="public" complexity="6" crap="6" count="3"/>
+        <line num="13" type="stmt" count="3"/>
+        <line num="18" type="stmt" count="3"/>
+        <line num="19" type="stmt" count="3"/>
+        <line num="20" type="stmt" count="3"/>
+        <line num="21" type="stmt" count="3"/>
+        <line num="22" type="stmt" count="3"/>
+        <line num="23" type="stmt" count="3"/>
+        <line num="28" type="stmt" count="3"/>
         <line num="29" type="stmt" count="2"/>
-        <line num="31" type="stmt" count="2"/>
+        <line num="31" type="stmt" count="3"/>
         <metrics loc="31" ncloc="22" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="10" coveredstatements="10" elements="11" coveredelements="11"/>
       </file>
       <file name="/srv/detox/src/core/Words.php">
         <class name="detox\core\Words" namespace="detox\core" fullPackage="detox" package="detox">
-          <metrics complexity="23" methods="11" coveredmethods="10" conditionals="0" coveredconditionals="0" statements="44" coveredstatements="42" elements="55" coveredelements="52"/>
+          <metrics complexity="25" methods="13" coveredmethods="11" conditionals="0" coveredconditionals="0" statements="47" coveredstatements="44" elements="60" coveredelements="55"/>
         </class>
-        <line num="33" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="7"/>
-        <line num="35" type="stmt" count="7"/>
-        <line num="36" type="stmt" count="7"/>
-        <line num="37" type="stmt" count="7"/>
-        <line num="42" type="method" name="processWords" visibility="public" complexity="6" crap="6" count="3"/>
-        <line num="45" type="stmt" count="3"/>
-        <line num="50" type="stmt" count="3"/>
-        <line num="51" type="stmt" count="3"/>
-        <line num="52" type="stmt" count="3"/>
-        <line num="53" type="stmt" count="3"/>
-        <line num="54" type="stmt" count="3"/>
-        <line num="55" type="stmt" count="3"/>
-        <line num="60" type="stmt" count="3"/>
+        <line num="33" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="9"/>
+        <line num="35" type="stmt" count="9"/>
+        <line num="36" type="stmt" count="9"/>
+        <line num="37" type="stmt" count="9"/>
+        <line num="42" type="method" name="processWords" visibility="public" complexity="6" crap="6" count="4"/>
+        <line num="45" type="stmt" count="4"/>
+        <line num="50" type="stmt" count="4"/>
+        <line num="51" type="stmt" count="4"/>
+        <line num="52" type="stmt" count="4"/>
+        <line num="53" type="stmt" count="4"/>
+        <line num="54" type="stmt" count="4"/>
+        <line num="55" type="stmt" count="4"/>
+        <line num="60" type="stmt" count="4"/>
         <line num="61" type="stmt" count="2"/>
-        <line num="63" type="stmt" count="3"/>
+        <line num="63" type="stmt" count="4"/>
         <line num="68" type="method" name="processPatterns" visibility="public" complexity="7" crap="7.10" count="2"/>
         <line num="70" type="stmt" count="2"/>
         <line num="71" type="stmt" count="2"/>
@@ -58,13 +58,13 @@
         <line num="96" type="method" name="setData" visibility="public" complexity="1" crap="1" count="1"/>
         <line num="98" type="stmt" count="1"/>
         <line num="99" type="stmt" count="1"/>
-        <line num="104" type="method" name="getScore" visibility="public" complexity="1" crap="1" count="5"/>
-        <line num="106" type="stmt" count="5"/>
+        <line num="104" type="method" name="getScore" visibility="public" complexity="1" crap="1" count="7"/>
+        <line num="106" type="stmt" count="7"/>
         <line num="112" type="method" name="setScore" visibility="public" complexity="1" crap="1" count="3"/>
         <line num="114" type="stmt" count="3"/>
         <line num="115" type="stmt" count="3"/>
-        <line num="121" type="method" name="addLowSpaces" visibility="protected" complexity="1" crap="1" count="7"/>
-        <line num="123" type="stmt" count="7"/>
+        <line num="121" type="method" name="addLowSpaces" visibility="protected" complexity="1" crap="1" count="9"/>
+        <line num="123" type="stmt" count="9"/>
         <line num="129" type="method" name="replace" visibility="protected" complexity="1" crap="1" count="3"/>
         <line num="132" type="stmt" count="3"/>
         <line num="133" type="stmt" count="3"/>
@@ -73,42 +73,81 @@
         <line num="139" type="stmt" count="1"/>
         <line num="140" type="stmt" count="1"/>
         <line num="142" type="stmt" count="1"/>
-        <line num="148" type="method" name="setText" visibility="public" complexity="1" crap="1" count="7"/>
-        <line num="150" type="stmt" count="7"/>
-        <line num="151" type="stmt" count="7"/>
+        <line num="148" type="method" name="setText" visibility="public" complexity="1" crap="1" count="9"/>
+        <line num="150" type="stmt" count="9"/>
+        <line num="151" type="stmt" count="9"/>
         <line num="156" type="method" name="getText" visibility="public" complexity="1" crap="1" count="3"/>
         <line num="158" type="stmt" count="3"/>
-        <metrics loc="159" ncloc="109" classes="1" methods="11" coveredmethods="10" conditionals="0" coveredconditionals="0" statements="44" coveredstatements="42" elements="55" coveredelements="52"/>
+        <line num="164" type="method" name="getDataSet" visibility="public" complexity="1" crap="2" count="0"/>
+        <line num="166" type="stmt" count="0"/>
+        <line num="172" type="method" name="setDataSet" visibility="public" complexity="1" crap="1" count="2"/>
+        <line num="174" type="stmt" count="2"/>
+        <line num="175" type="stmt" count="2"/>
+        <metrics loc="175" ncloc="119" classes="1" methods="13" coveredmethods="11" conditionals="0" coveredconditionals="0" statements="47" coveredstatements="44" elements="60" coveredelements="55"/>
       </file>
     </package>
     <package name="detox\dataset">
+      <file name="/srv/detox/src/dataset/CustomSet.php">
+        <class name="detox\dataset\CustomSet" namespace="detox\dataset">
+          <metrics complexity="9" methods="5" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="15" coveredstatements="14" elements="20" coveredelements="18"/>
+        </class>
+        <line num="16" type="method" name="getWords" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="18" type="stmt" count="1"/>
+        <line num="25" type="method" name="setWords" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="27" type="stmt" count="1"/>
+        <line num="28" type="stmt" count="1"/>
+        <line num="29" type="stmt" count="1"/>
+        <line num="34" type="method" name="getPhrases" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="36" type="stmt" count="1"/>
+        <line num="43" type="method" name="setPhrases" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="45" type="stmt" count="1"/>
+        <line num="46" type="stmt" count="1"/>
+        <line num="47" type="stmt" count="1"/>
+        <line num="53" type="method" name="checkDict" visibility="private" complexity="5" crap="5.07" count="2"/>
+        <line num="55" type="stmt" count="2"/>
+        <line num="56" type="stmt" count="2"/>
+        <line num="57" type="stmt" count="0"/>
+        <line num="59" type="stmt" count="2"/>
+        <line num="60" type="stmt" count="2"/>
+        <line num="61" type="stmt" count="2"/>
+        <line num="65" type="stmt" count="2"/>
+        <metrics loc="65" ncloc="47" classes="1" methods="5" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="15" coveredstatements="14" elements="20" coveredelements="18"/>
+      </file>
       <file name="/srv/detox/src/dataset/EnglishSet.php">
         <class name="detox\dataset\EnglishSet" namespace="detox\dataset">
           <metrics complexity="2" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="2" coveredstatements="2" elements="4" coveredelements="4"/>
         </class>
         <line num="61" type="method" name="getWords" visibility="public" complexity="1" crap="1" count="3"/>
         <line num="63" type="stmt" count="3"/>
-        <line num="66" type="method" name="getPhrases" visibility="public" complexity="1" crap="1" count="2"/>
-        <line num="68" type="stmt" count="2"/>
-        <metrics loc="69" ncloc="62" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="2" coveredstatements="2" elements="4" coveredelements="4"/>
+        <line num="69" type="method" name="getPhrases" visibility="public" complexity="1" crap="1" count="2"/>
+        <line num="71" type="stmt" count="2"/>
+        <metrics loc="72" ncloc="62" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="2" coveredstatements="2" elements="4" coveredelements="4"/>
       </file>
     </package>
     <file name="/srv/detox/src/dataset/SetContract.php">
       <metrics loc="11" ncloc="11" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
     </file>
+    <package name="detox\exceptions">
+      <file name="/srv/detox/src/exceptions/BadDictException.php">
+        <class name="detox\exceptions\BadDictException" namespace="detox\exceptions">
+          <metrics complexity="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+        </class>
+        <metrics loc="7" ncloc="7" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+      </file>
+    </package>
     <package name="detox\source">
       <file name="/srv/detox/src/source/Text.php">
         <class name="detox\source\Text" namespace="detox\source">
           <metrics complexity="11" methods="11" coveredmethods="11" conditionals="0" coveredconditionals="0" statements="17" coveredstatements="17" elements="28" coveredelements="28"/>
         </class>
-        <line num="13" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="9"/>
-        <line num="15" type="stmt" count="9"/>
-        <line num="16" type="stmt" count="9"/>
-        <line num="18" type="method" name="setString" visibility="public" complexity="1" crap="1" count="8"/>
-        <line num="20" type="stmt" count="8"/>
-        <line num="21" type="stmt" count="8"/>
-        <line num="23" type="method" name="getString" visibility="public" complexity="1" crap="1" count="8"/>
-        <line num="25" type="stmt" count="8"/>
+        <line num="13" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="11"/>
+        <line num="15" type="stmt" count="11"/>
+        <line num="16" type="stmt" count="11"/>
+        <line num="18" type="method" name="setString" visibility="public" complexity="1" crap="1" count="10"/>
+        <line num="20" type="stmt" count="10"/>
+        <line num="21" type="stmt" count="10"/>
+        <line num="23" type="method" name="getString" visibility="public" complexity="1" crap="1" count="10"/>
+        <line num="25" type="stmt" count="10"/>
         <line num="31" type="method" name="setReplaceChars" visibility="public" complexity="1" crap="1" count="3"/>
         <line num="33" type="stmt" count="3"/>
         <line num="34" type="stmt" count="3"/>
@@ -124,14 +163,14 @@
         <line num="66" type="stmt" count="3"/>
         <line num="71" type="method" name="getPrefix" visibility="public" complexity="1" crap="1" count="4"/>
         <line num="73" type="stmt" count="4"/>
-        <line num="79" type="method" name="isReplaceable" visibility="public" complexity="1" crap="1" count="7"/>
-        <line num="81" type="stmt" count="7"/>
+        <line num="79" type="method" name="isReplaceable" visibility="public" complexity="1" crap="1" count="9"/>
+        <line num="81" type="stmt" count="9"/>
         <line num="87" type="method" name="setReplaceable" visibility="public" complexity="1" crap="1" count="3"/>
         <line num="89" type="stmt" count="3"/>
         <line num="90" type="stmt" count="3"/>
         <metrics loc="90" ncloc="66" classes="1" methods="11" coveredmethods="11" conditionals="0" coveredconditionals="0" statements="17" coveredstatements="17" elements="28" coveredelements="28"/>
       </file>
     </package>
-    <metrics files="5" loc="360" ncloc="270" classes="4" methods="25" coveredmethods="24" conditionals="0" coveredconditionals="0" statements="73" coveredstatements="71" elements="98" coveredelements="95"/>
+    <metrics files="7" loc="451" ncloc="334" classes="5" methods="32" coveredmethods="29" conditionals="0" coveredconditionals="0" statements="91" coveredstatements="87" elements="123" coveredelements="116"/>
   </project>
 </coverage>

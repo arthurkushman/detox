@@ -4,7 +4,9 @@ namespace detoxtests\dataset;
 
 
 use detox\core\Words;
+use detox\dataset\CustomSet;
 use detox\dataset\EnglishSet;
+use detox\exceptions\BadDictException;
 use detox\source\Text;
 use PHPUnit\Framework\TestCase;
 
@@ -160,5 +162,21 @@ class WordsTest extends TestCase
 
         $this->words->processWords();
         $this->assertEquals('pre____post you pre____post', $this->words->getText()->getString());
+    }
+
+    /**
+     * @test
+     */
+    public function it_sets_custom_dict()
+    {
+        $customSet = new CustomSet();
+        $customSet->setWords([
+            '0.9' => ['weird']
+        ]);
+        $this->text->setString('This weird text should be detected');
+        $this->words->setText($this->text);
+        $this->words->setDataSet($customSet);
+        $this->words->processWords();
+        $this->assertEquals(0.9, $this->words->getScore());
     }
 }

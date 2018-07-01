@@ -157,4 +157,20 @@ class Words
     {
         return $this->text;
     }
+
+    /**
+     * @return SetContract
+     */
+    public function getDataSet() : SetContract
+    {
+        return $this->dataSet;
+    }
+
+    /**
+     * @param SetContract $dataSet
+     */
+    public function setDataSet(SetContract $dataSet) : void
+    {
+        $this->dataSet = $dataSet;
+    }
 }

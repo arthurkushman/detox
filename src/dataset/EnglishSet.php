@@ -63,6 +63,9 @@ class EnglishSet implements SetContract
         return $this->words;
     }
 
+    /**
+     * @return array
+     */
     public function getPhrases() : array
     {
         return $this->phrases;

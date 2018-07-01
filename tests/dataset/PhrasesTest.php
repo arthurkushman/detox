@@ -1,15 +1,10 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: arthurkushman
- * Date: 30.06.18
- * Time: 13:40
- */
 
 namespace detoxtests\dataset;
 
 
 use detox\core\Phrases;
+use detox\dataset\CustomSet;
 use detox\dataset\EnglishSet;
 use detox\source\Text;
 use PHPUnit\Framework\TestCase;
@@ -80,5 +75,21 @@ class PhrasesTest extends TestCase
 
         $this->phrases->processPhrases();
         $this->assertEquals('just pre____post dude', $this->phrases->getText()->getString());
+    }
+
+    /**
+     * @test
+     */
+    public function it_sets_custom_dict()
+    {
+        $customSet = new CustomSet();
+        $customSet->setPhrases([
+            '0.8' => ['weird phrase']
+        ]);
+        $this->text->setString('This weird phrase text should be detected');
+        $this->phrases->setText($this->text);
+        $this->phrases->setDataSet($customSet);
+        $this->phrases->processPhrases();
+        $this->assertEquals(0.8, $this->phrases->getScore());
     }
 }
