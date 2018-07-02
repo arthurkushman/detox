@@ -31,6 +31,7 @@ class EnglishSet implements SetContract
             'honkey',
             'nigger',
             'flikker',
+            'scumbag',
             // porn industry
             'bukakke',
             'dildo',
@@ -60,7 +61,21 @@ class EnglishSet implements SetContract
         '0.9' => ['swinger party', 'bloody hell', 'bugger off', 'black on white', 'double penetration'],
         '0.8' => ['get staffed', 'get lost'],
         '0.7' => ['screw you', 'screw u', 'get off'],
-        '0.3' => ['white supremacy', 'black supremacy', 'ku klux klan', 'black people', 'white people'],
+        '0.3' => ['white supremacy', 'black supremacy', 'ku klux klan'],
+        '0.2' => [
+            'black people',
+            'white people',
+            'asian people',
+            'indian people',
+            'spanish people',
+            'mexican people',
+            'black ppl',
+            'white ppl',
+            'asian ppl',
+            'indian ppl',
+            'spanish ppl',
+            'mexican ppl',
+        ],
     ];
 
     /**
