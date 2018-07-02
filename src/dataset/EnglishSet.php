@@ -7,7 +7,7 @@ class EnglishSet implements SetContract
 {
 
     private $words = [
-        '1.0' => [
+        '1.0'  => [
             // simple bad words
             'fuck',
             'slut',
@@ -45,19 +45,21 @@ class EnglishSet implements SetContract
             'anal',
             'vagina',
         ],
-        '0.9' => ['ugly', 'stupid', 'dumb', 'boobs', 'pish', 'fanny', 'slag', 'squirt', 'torture', 'ass', 'nitwit', 'whiffet'],
-        '0.8' => ['silly', 'tits', 'pussy', 'sick', 'git', 'poop', 'slaughter'],
-        '0.7' => ['shallow', 'foolish', 'nonce', 'bugger', 'naught', 'prick', 'schmuck', 'nonentity'],
-        '0.6' => ['rednack', 'mindless', 'fat', 'nude', 'wft', 'snot', 'bloodbath', 'massacre', 'massacrer'],
-        '0.5' => ['bully', 'sneaky', 'greedy', 'creep', 'kill', 'revenge', 'catfight', 'die', 'death', 'nought', 'nonentity'],
-        '0.4' => ['superficial', 'numb', 'clown', 'villager', 'flatter', 'murder', 'nothingness'],
-        '0.3' => ['fake', 'strange', 'ignorant', 'critical', 'nuts', 'cum', 'genitals', 'retaliation', 'freak'],
-        '0.2' => ['useless', 'thoughtless', 'crazy', 'bollocks', 'bit', 'hit', 'exterminate'],
-        '0.1' => ['dude', 'pal', 'yo', 'punch', 'insect', 'annihilate'],
+        '0.9'  => ['ugly', 'stupid', 'dumb', 'boobs', 'pish', 'fanny', 'slag', 'squirt', 'torture', 'ass', 'nitwit', 'whiffet'],
+        '0.8'  => ['silly', 'tit', 'tits', 'pussy', 'sick', 'git', 'poop', 'slaughter'],
+        '0.7'  => ['shallow', 'foolish', 'nonce', 'bugger', 'naught', 'prick', 'schmuck', 'nonentity', 'idiot'],
+        '0.6'  => ['rednack', 'mindless', 'fat', 'nude', 'wft', 'snot', 'bloodbath', 'massacre', 'massacrer'],
+        '0.5'  => ['bully', 'sneaky', 'greedy', 'creep', 'kill', 'revenge', 'catfight', 'die', 'death', 'nought', 'nonentity'],
+        '0.4'  => ['superficial', 'numb', 'clown', 'villager', 'flatter', 'murder', 'nothingness'],
+        '0.3'  => ['fake', 'strange', 'ignorant', 'critical', 'nuts', 'cum', 'genitals', 'retaliation', 'freak'],
+        '0.2'  => ['useless', 'thoughtless', 'crazy', 'bollocks', 'bit', 'hit', 'exterminate', 'gangster'],
+        // <= 0.1 is almost noise for detox
+        '0.1'  => ['punch', 'insect', 'annihilate', 'steal', 'kick', 'kidnap'],
+        '0.06' => ['dude', 'pal', 'yo'],
     ];
 
     private $phrases = [
-        '1.0' => ['dirty sanchez', 'gang bang', 'piss off', 'blow job'],
+        '1.0' => ['dirty sanchez', 'gang bang', 'piss off', 'blow job', 'kick ass'],
         '0.9' => ['swinger party', 'bloody hell', 'bugger off', 'black on white', 'double penetration'],
         '0.8' => ['get staffed', 'get lost'],
         '0.7' => ['screw you', 'screw u', 'get off'],
