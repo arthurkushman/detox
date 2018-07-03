@@ -52,13 +52,13 @@ class WordsTest extends TestCase
         $this->assertEquals(0.9, $this->words->getScore());
         // 0.8 level
         $this->words->setScore(0);
-        $this->text->setString('She has tits');
+        $this->text->setString('There was a slaughter, they told me');
         $this->words->setText($this->text);
         $this->words->processWords();
         $this->assertEquals(0.8, $this->words->getScore());
         // 0.7 level
         $this->words->setScore(0);
-        $this->text->setString('She is so foolish');
+        $this->text->setString('She has tits');
         $this->words->setText($this->text);
         $this->words->processWords();
         $this->assertEquals(0.7, $this->words->getScore());
@@ -92,12 +92,12 @@ class WordsTest extends TestCase
         $this->words->setText($this->text);
         $this->words->processWords();
         $this->assertEquals(0.2, $this->words->getScore());
-        // 0.1 level
+        // 0.1 level and lower/noisier
         $this->words->setScore(0);
         $this->text->setString('Dude why are you saying so');
         $this->words->setText($this->text);
         $this->words->processWords();
-        $this->assertEquals(0.1, $this->words->getScore());
+        $this->assertEquals(0.06, $this->words->getScore());
     }
 
     /**
@@ -178,5 +178,17 @@ class WordsTest extends TestCase
         $this->words->setDataSet($customSet);
         $this->words->processWords();
         $this->assertEquals(0.9, $this->words->getScore());
+    }
+
+    /**
+     * @test
+     */
+    public function it_checks_mutated_words()
+    {
+        $this->words->setScore(0);
+        $this->text->setString('Dude you look fuckingly cockish in that crappy situation');
+        $this->words->setText($this->text);
+        $this->words->processWords();
+        $this->assertEquals(1.0, $this->words->getScore());
     }
 }

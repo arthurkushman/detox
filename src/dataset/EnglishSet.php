@@ -46,15 +46,15 @@ class EnglishSet implements SetContract
             'vagina',
         ],
         '0.9'  => ['ugly', 'stupid', 'dumb', 'boobs', 'pish', 'fanny', 'slag', 'squirt', 'torture', 'ass', 'nitwit', 'whiffet'],
-        '0.8'  => ['silly', 'tit', 'tits', 'pussy', 'sick', 'git', 'poop', 'slaughter'],
-        '0.7'  => ['shallow', 'foolish', 'nonce', 'bugger', 'naught', 'prick', 'schmuck', 'nonentity', 'idiot'],
+        '0.8'  => ['silly', 'pussy', 'sick', 'git', 'poop', 'slaughter', 'sperm'],
+        '0.7'  => ['shallow', 'tit', 'tits', 'foolish', 'nonce', 'bugger', 'naught', 'prick', 'schmuck', 'nonentity', 'idiot'],
         '0.6'  => ['rednack', 'mindless', 'fat', 'nude', 'wft', 'snot', 'bloodbath', 'massacre', 'massacrer'],
         '0.5'  => ['bully', 'sneaky', 'greedy', 'creep', 'kill', 'revenge', 'catfight', 'die', 'death', 'nought', 'nonentity'],
         '0.4'  => ['superficial', 'numb', 'clown', 'villager', 'flatter', 'murder', 'nothingness'],
-        '0.3'  => ['fake', 'strange', 'ignorant', 'critical', 'nuts', 'cum', 'genitals', 'retaliation', 'freak'],
+        '0.3'  => ['fake', 'strange', 'ignorant', 'critical', 'nuts', 'cum', 'genitals', 'retaliation', 'freak', 'kick'],
         '0.2'  => ['useless', 'thoughtless', 'crazy', 'bollocks', 'bit', 'hit', 'exterminate', 'gangster'],
         // <= 0.1 is almost noise for detox
-        '0.1'  => ['punch', 'insect', 'annihilate', 'steal', 'kick', 'kidnap'],
+        '0.1'  => ['punch', 'insect', 'annihilate', 'steal', 'kidnap'],
         '0.06' => ['dude', 'pal', 'yo'],
     ];
 

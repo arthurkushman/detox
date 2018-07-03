@@ -44,6 +44,7 @@ class Words
         // to match lower case letters in words set array
         $lowerSource = $this->addLowSpaces($this->text->getString());
         /**
+         * 1st level checking discrete words with spaces
          * @var string $points
          * @var array $words
          */
@@ -53,6 +54,20 @@ class Words
                     $this->score += (float)$points;
                     if ($this->text->isReplaceable()) {
                         $this->replace($word);
+                    }
+                }
+            }
+        }
+        if ($this->score < self::ASTERISKS_MIDDLE) {
+            // 2nd level checking the worst (3 highest levels) words with probability to be mutated ex.: shittyass, crappish, unfuckkish etc
+            $slice = array_slice($this->dataSet->getWords(), 0, 3);
+            foreach ($slice as $points => $words) {
+                foreach ($words as $word) {
+                    if (mb_strpos($lowerSource, $word) !== false) {
+                        $this->score += (float)$points;
+                        if ($this->text->isReplaceable()) {
+                            $this->replace($word);
+                        }
                     }
                 }
             }
