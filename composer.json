@@ -1,5 +1,5 @@
 {
-    "description": "DETOX - toxic comments detection library ",
+    "description": "Detox is a library to detect toxic text (comments/posts etc) of variable length with different patterns",
     "type": "detox",
     "name": "arthurkushman/detox",
     "license": "MIT",
