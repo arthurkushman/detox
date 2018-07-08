@@ -4,6 +4,7 @@
 [![Build Status](https://scrutinizer-ci.com/g/arthurkushman/detox/badges/build.png?b=master)](https://scrutinizer-ci.com/g/arthurkushman/detox/build-status/master)
 [![Code Intelligence Status](https://scrutinizer-ci.com/g/arthurkushman/detox/badges/code-intelligence.svg?b=master)](https://scrutinizer-ci.com/code-intelligence)
 [![codecov](https://codecov.io/gh/arthurkushman/detox/branch/master/graph/badge.svg)](https://codecov.io/gh/arthurkushman/detox)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
 It's inspired by providing tool for simple scoring/filtering with just a PHP implementation (without the need to set multiple libs probably on C/Python, or importing db dumps etc).   
 
