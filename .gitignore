@@ -1,3 +1,4 @@
 /vendor/
 .idea/
 infection.json.dist
+composer.lock

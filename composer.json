@@ -24,6 +24,9 @@
         "mockery/mockery": "~1.0",
         "fzaninotto/faker": "^1.7"
     },
+    "suggest": {
+        "solidry/api-generator": "PHP-code generator (based on OAS) for Laravel framework, with complete support of JSON-API data format"
+    },
     "minimum-stability": "dev",
     "prefer-stable": true
-}
+},
