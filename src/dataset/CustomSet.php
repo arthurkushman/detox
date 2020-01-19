@@ -50,7 +50,7 @@ class CustomSet implements SetContract
      * @param array $dict
      * @throws BadDictException
      */
-    private function checkDict(array $dict)
+    private function checkDict(array $dict): void
     {
         foreach ($dict as $score => $words) {
             if (is_numeric($score) === false) {
